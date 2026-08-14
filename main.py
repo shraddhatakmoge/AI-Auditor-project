@@ -9,6 +9,8 @@ def main():
 
     auditor = FinalAuditor()
 
+    print("\nAnalyzing decision...")
+
     result = auditor.audit(decision)
 
     print("\n" + "=" * 60)
@@ -21,16 +23,6 @@ def main():
     print("\nDOMAIN")
     print(result["domain"])
 
-    print("\nCLAIMS")
-
-    for claim in result["claims"]:
-        print(
-            f"- {claim.text} "
-            f"[{claim.importance}] "
-            f"[{claim.claim_type.value}] "
-            f"[{claim.verifiability.value}]"
-        )
-
     print("\nASSUMPTIONS")
 
     for assumption in result["assumptions"]:
@@ -39,58 +31,52 @@ def main():
             f"[{assumption.importance}]"
         )
 
+    print("\nEXPECTED OUTCOME")
+    print(result["expected_outcome"])
+
     print("\nMISSING INFORMATION")
 
     for item in result["missing_information"]:
         print(f"- {item}")
 
-    print("\nEVIDENCE AUDIT")
+    print("\nEVIDENCE VERIFICATION")
 
-    for audit in result["audit_results"]:
+    verification = result["verification"]
 
-        print("\nClaim:")
-        print(audit.claim)
+    print("Status:")
+    print(verification.status.value)
 
-        print("Status:")
-        print(audit.status.value)
+    print("Confidence:")
+    print(verification.confidence)
 
-        print("Confidence:")
-        print(audit.confidence)
+    print("Reasoning:")
+    print(verification.reasoning)
 
-        print("Reasoning:")
-        print(audit.reasoning)
+    print("\nRETRIEVED EVIDENCE")
 
-        print("Evidence:")
-
-        for evidence in audit.evidence:
-            print(f"- {evidence.content}")
-            print(f"  Source: {evidence.source}")
+    for document in result["evidence"]:
+        print(f"- {document.page_content}")
 
     print("\nCOUNTERARGUMENT")
 
-    print(
-        result["counterargument"].argument
-    )
+    counterargument = result["counterargument"]
+
+    print("Argument:")
+    print(counterargument.argument)
 
     print("\nReasoning:")
-
-    print(
-        result["counterargument"].reasoning
-    )
+    print(counterargument.reasoning)
 
     print("\nRISK ASSESSMENT")
 
-    print(
-        f"Score: {result['risk']['score']}/10"
-    )
-    
-    print(
-        f"Level: {result['risk']['level'].upper()}"
-    )
-    
+    risk = result["risk"]
+
+    print(f"Score: {risk['score']}/10")
+    print(f"Level: {risk['level'].upper()}")
+
     print("\nWhy:")
-    
-    for reason in result["risk"]["reasons"]:
+
+    for reason in risk["reasons"]:
         print(f"- {reason}")
 
     print("\n" + "=" * 60)

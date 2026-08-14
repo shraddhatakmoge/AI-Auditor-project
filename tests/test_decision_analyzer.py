@@ -18,6 +18,6 @@ def test_decision_analyzer():
 
     assert result.decision
     assert result.domain
-    assert len(result.claims) > 0
     assert len(result.assumptions) > 0
     assert result.expected_outcome
+    assert result.missing_information

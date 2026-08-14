@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List
 
-from app.schemas.claim import Claim
+
 
 
 class Assumption(BaseModel):
@@ -23,9 +23,7 @@ class DecisionAnalysis(BaseModel):
         description="The general domain of the decision."
     )
 
-    claims: List[Claim] = Field(
-        description="Important claims supporting the decision."
-    )
+
 
     assumptions: List[Assumption] = Field(
         description="Important assumptions behind the decision."

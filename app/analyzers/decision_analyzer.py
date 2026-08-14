@@ -8,7 +8,7 @@ class DecisionAnalyzer:
 
     def __init__(self):
         self.llm = ChatOllama(
-    model="qwen3:8b",
+    model="gemma3:1b",
     temperature=0,
     think=False
 )

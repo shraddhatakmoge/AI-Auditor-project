@@ -9,7 +9,7 @@ class CounterargumentEngine:
     def __init__(self):
 
         self.llm = ChatOllama(
-            model="qwen3:8b",
+            model="gemma3:1b",
             temperature=0,
             think=False
         )
@@ -21,11 +21,6 @@ class CounterargumentEngine:
         self.chain = counterargument_prompt | self.structured_llm
 
     def generate(self, decision_analysis):
-
-        claims = "\n".join(
-            f"- {claim.text}"
-            for claim in decision_analysis.claims
-        )
 
         assumptions = "\n".join(
             f"- {assumption.text}"
@@ -40,8 +35,9 @@ class CounterargumentEngine:
         return self.chain.invoke(
             {
                 "decision": decision_analysis.decision,
-                "claims": claims,
+                "domain": decision_analysis.domain,
                 "assumptions": assumptions,
+                "expected_outcome": decision_analysis.expected_outcome,
                 "missing_information": missing_information
             }
         )
