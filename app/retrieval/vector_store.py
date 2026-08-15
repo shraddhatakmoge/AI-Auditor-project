@@ -4,7 +4,7 @@ from langchain_community.vectorstores import FAISS
 
 def create_vector_store(documents):
 
-    embeddings =OllamaEmbeddings(
+    embeddings = OllamaEmbeddings(
         model="nomic-embed-text"
     )
 
