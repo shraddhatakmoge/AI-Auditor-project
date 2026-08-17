@@ -1,12 +1,13 @@
 # 🧠 AI Decision Auditor
 
-<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/2edc506a-9637-4c0e-af9d-d0430edd232f" />
+<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/dc50f55e-c8be-4033-b536-a0c2fc0ddff0" />
 
-<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/84c67205-15e9-4e01-9fd5-c1a9371e8e66" />
+<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/1e5e1c13-2528-4ab8-b8c1-5e47cd98cbb7" />
 
-<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/dfe75ead-9c02-486a-bb99-0b7ba44757f1" />
+<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/6c0d4966-6596-4ddc-abc5-b8e23ad20b88" />
 
-<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/d5cfc2ea-5438-48f6-9059-91764286a901" />
+<img width="1836" height="1015" alt="Screenshot 2026-08-16 220553" src="https://github.com/user-attachments/assets/d69bca3c-b0f5-4df2-b904-883554d48e3e" />
+
 
 
 An AI-powered decision auditing system that analyzes a user's decision, identifies hidden assumptions, missing information, expected outcomes, risks, and counterarguments, then verifies the decision against retrieved evidence.
